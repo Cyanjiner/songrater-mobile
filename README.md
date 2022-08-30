@@ -59,12 +59,12 @@ expo install expo-app-loading
 ### 2. Run the App
 2.1 Backend
 ```shell
-cd hw03-main/backend
+cd backend
 python3 manage.py runserver
 ```
 2.2 Frontend
 ```shell
-cd hw03-main/frontend
+cd songrater
 npm install
 ```
 ```shell
