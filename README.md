@@ -1,6 +1,5 @@
 # Songrater-app
 
-## Problem 1:
 ### Firebase Frontend: [https://songrater-comp333.firebaseapp.com/](https://songrater-comp333.firebaseapp.com/)
 ### Heroku Django Backend: [https://songrater-comp333.herokuapp.com/api/](https://songrater-comp333.herokuapp.com/api/rating/)
 
@@ -11,7 +10,7 @@
 - **Authentication:** [https://songrater-comp333.herokuapp.com/api/auth/user](https://songrater-comp333.herokuapp.com/api/auth/user)
 
 
-## Problem 2:
+## Instructions
 
 ### 1. Backend
 - Install the virtual environment, `django-react`, with:
