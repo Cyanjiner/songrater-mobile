@@ -64,7 +64,7 @@ python3 manage.py runserver
 ```
 2.2 Frontend
 ```shell
-cd songrater
+cd songrater-app
 npm install
 ```
 ```shell
