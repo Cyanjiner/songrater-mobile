@@ -1,7 +1,6 @@
 # Songrater-app
 
-### Deployed Website: [https://songrater-comp333.firebaseapp.com/](Link to Songrater)
-### Heroku Django Backend: [https://songrater-comp333.herokuapp.com/api/](https://songrater-comp333.herokuapp.com/api/rating/)
+### Deployed Website: [Link to Songrater](https://songrater-comp333.firebaseapp.com/)
 
 ## Instructions
 
@@ -119,6 +118,8 @@ To send a POST request to <http://127.0.0.1:8000/api/auth/login> via Postman, ju
 
 #### User Authorization:
 Now, send a GET request to <http://127.0.0.1:8000/api/auth/user>, you need to choose Authorization as `key` and paste the token you get from log-in with 'Token ' in front of it as `Value` in the `Headers`. For example: "Token 78d2b3c0edc368eb416c0a76e55a6378df3ddb1721137ca5571d1cd69c3bcc06"
+
+*Heroku Django Backend: [https://songrater-comp333.herokuapp.com/api/](https://songrater-comp333.herokuapp.com/api/rating/)
 
 ## Contributions
 Tanya, Tomoshi, Jiner
