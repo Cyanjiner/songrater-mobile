@@ -1,18 +1,12 @@
 # Songrater-app
 
-### Firebase Frontend: [https://songrater-comp333.firebaseapp.com/](https://songrater-comp333.firebaseapp.com/)
+### Deployed Website: [https://songrater-comp333.firebaseapp.com/](Link to Songrater)
 ### Heroku Django Backend: [https://songrater-comp333.herokuapp.com/api/](https://songrater-comp333.herokuapp.com/api/rating/)
-
-- **Rating:** [https://songrater-comp333.herokuapp.com/api/rating/](https://songrater-comp333.herokuapp.com/api/rating/)
-- **Song:** [https://songrater-comp333.herokuapp.com/api/song/](https://songrater-comp333.herokuapp.com/api/song/)
-- **Register:** [https://songrater-comp333.herokuapp.com/api/auth/register](https://songrater-comp333.herokuapp.com/api/auth/register)
-- **Login:** [https://songrater-comp333.herokuapp.com/api/auth/login](https://songrater-comp333.herokuapp.com/api/auth/login)
-- **Authentication:** [https://songrater-comp333.herokuapp.com/api/auth/user](https://songrater-comp333.herokuapp.com/api/auth/user)
-
 
 ## Instructions
 
-### 1. Backend
+### 1. Setting up
+#### 1.1 Creat the Virtual Environment
 - Install the virtual environment, `django-react`, with:
 ```shell
 python3 -m venv django-react
@@ -22,7 +16,7 @@ python3 -m venv django-react
 ```shell
 source django-react/bin/activate.fish
 ```
-
+#### 1.2 Django dependencies
 - Install dependencies with:
 ```shell
 python3 -m pip install django
@@ -38,9 +32,7 @@ cd backend
 python3 manage.py runserver
 ```
 
-
-
-### 2. Frontend (React)
+#### 1.3. React dependencies
 - Open another terminal (let's call it terminal 2), and cd to songrater-app directory with `cd songrater-app`.
 
 - React requires node.js and its package manager npm. If you have not done so,
@@ -65,19 +57,29 @@ expo install expo-font
 expo install expo-app-loading
 ```
 
-- Lastly, run songrater app with:
+### 2. Run the App
+2.1 Backend
+```shell
+cd hw03-main/backend
+python3 manage.py runserver
+```
+2.2 Frontend
+```shell
+cd hw03-main/frontend
+npm install
+```
 ```shell
 npm start
 ```
 OR
-```shell
+```
 expo start
 ```
 
-- In theopening browser window (Connection: LAN) click run on iOS simulator. If there is an error, try running `expo upgrade`.
+- In the opening browser window (Connection: LAN) click run on iOS simulator. If there is an error, try running `expo upgrade`.
 
 - The Expo server can be stopped with `ctrl + c`.
-### How to Use the App
+###3. How to Use the Songrater App
 
 #### Register or Login
 If you have already created an account you can login in, otherwise click on the "Register Button". After you have registered, you should be redirected to the login page where you can login.
@@ -93,3 +95,30 @@ click the song tile and click on the number of stars you want to rate the song. 
 
 #### delete song
 To delete a song, click on the songtile and then press the delete button
+
+###4. Test APIs using Postman for user authentication
+---------------------------------------------------------------------------------------------
+
+If you want JUST WANT to test the backend, please check the following.
+
+### Test APIs using Postman for user authentication
+Download desktop client from Postman at <https://www.postman.com/downloads/>.
+
+#### Registration:
+To send a POST request to <http://127.0.0.1:8000/api/auth/register> via Postman, you can choose Content-Type as `key` and application/json as `value` in the `Headers`. Then in the `body`, select `raw` and include the following:
+```shell
+{
+    "username": "jinerzheng",
+    "password": "12345"
+}
+```
+And then click on `send`. If successfully registered, you should be able to see a token generated.
+
+#### Login:
+To send a POST request to <http://127.0.0.1:8000/api/auth/login> via Postman, just do the same steps as above (put in the same username and password after you registered successfully). After you get a token, copy that for user authorization.
+
+#### User Authorization:
+Now, send a GET request to <http://127.0.0.1:8000/api/auth/user>, you need to choose Authorization as `key` and paste the token you get from log-in with 'Token ' in front of it as `Value` in the `Headers`. For example: "Token 78d2b3c0edc368eb416c0a76e55a6378df3ddb1721137ca5571d1cd69c3bcc06"
+
+## Contributions
+Tanya, Tomoshi, Jiner
