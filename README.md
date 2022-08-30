@@ -96,7 +96,7 @@ click the song tile and click on the number of stars you want to rate the song. 
 #### delete song
 To delete a song, click on the songtile and then press the delete button
 
-###4. Test APIs using Postman for user authentication
+### 4. Test APIs using Postman for user authentication
 ---------------------------------------------------------------------------------------------
 
 If you want JUST WANT to test the backend, please check the following.
